@@ -1,7 +1,7 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { api } from "../services/api";
 
-export const useInfiniteTodos = (category) => {
+export const useInfiniteProducts = (category) => {
   const query = useInfiniteQuery({
     queryKey: ["products", category],
     queryFn: ({ pageParam = 0 }) =>

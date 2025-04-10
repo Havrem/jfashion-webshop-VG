@@ -1,5 +1,5 @@
 import Card from "../components/Card";
-import { useInfiniteTodos } from "../hooks/useInfiniteProducts";
+import { useInfiniteProducts } from "../hooks/useInfiniteProducts";
 import styles from "../css/Content.module.css";
 import { useParams } from "react-router-dom";
 import Breadcrumbs from "../components/Breadcrumbs";
@@ -11,7 +11,7 @@ import Footer from "../components/Footer";
 const Product = () => {
   const { category } = useParams();
   const { data, products, fetchNextPage, isLoading, isError, hasNextPage } =
-    useInfiniteTodos(category);
+    useInfiniteProducts(category);
 
   if (isLoading) return <p>Loading...</p>;
   if (isError) return <p>Something went wrong!</p>;
