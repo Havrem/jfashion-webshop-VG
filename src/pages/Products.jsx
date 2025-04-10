@@ -1,5 +1,5 @@
 import Card from "../components/Card";
-import { useInfiniteTodos } from "../hooks/useInfiniteTodos";
+import { useInfiniteTodos } from "../hooks/useInfiniteProducts";
 import styles from "../css/Content.module.css";
 import { useParams } from "react-router-dom";
 import Breadcrumbs from "../components/Breadcrumbs";

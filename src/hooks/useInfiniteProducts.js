@@ -3,7 +3,7 @@ import { api } from "../services/api";
 
 export const useInfiniteTodos = (category) => {
   const query = useInfiniteQuery({
-    queryKey: ["todos", category],
+    queryKey: ["products", category],
     queryFn: ({ pageParam = 0 }) =>
       api(`https://dummyjson.com/products/category/${category}?limit=10&skip=${pageParam}&select=title,price,thumbnail,brand,rating,description,category`),
     getNextPageParam: (last, all) => {
