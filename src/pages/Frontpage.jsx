@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "../css/Frontpage.module.css";
-import { Image } from "react-bootstrap";
 import bild1 from "../assets/promo1.png";
 import bild2 from "../assets/promo2.png";
 import { Link } from "react-router-dom";
@@ -20,9 +19,7 @@ function Frontpage() {
               designs, mix and match from seasonal collections, and bring your wardrobe to life with
               timeless and expressive styles.
             </h4>
-            <a className={styles.buybutton} href="/shop" role="button">
-              Shop now
-            </a>
+            <Link className={styles.buybutton} to="/shop">Shop now</Link>
           </div>
         </header>
         <div className={styles.imagecontainer}>
