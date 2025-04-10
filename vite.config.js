@@ -4,6 +4,7 @@ import path from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/jfashion-webshop/',
   plugins: [react()],
   build: {
     outDir: path.resolve(__dirname, "./dist"),
