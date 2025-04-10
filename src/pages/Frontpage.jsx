@@ -9,7 +9,6 @@ import Footer from "../components/Footer";
 function Frontpage() {
   return (
     <div className={styles.mywrap}>
-      <h1>TEMP HEADER</h1>
       <Navbar></Navbar>
       <div className={styles.mainContent}>
         <header className={styles.banner}>
