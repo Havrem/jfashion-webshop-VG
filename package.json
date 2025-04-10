@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://havrem.github.io/jfashion-webshop",
+  "homepage": "https://havrem.github.io/jfashion-webshop-VG",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
