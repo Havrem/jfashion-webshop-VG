@@ -4,8 +4,16 @@
     <meta charset="UTF-8" />
     <title>Redirecting...</title>
     <script type="text/javascript">
-      const redirectTo = '/jfashion-webshop' + window.location.pathname + window.location.search + window.location.hash;
-      window.location.replace(redirectTo);
+      (function() {
+        const pathname = window.location.pathname;
+        const base = '/jfashion-webshop';
+
+        // Only redirect if we're not already under the base path
+        if (!pathname.startsWith(base)) {
+          const newPath = base + pathname + window.location.search + window.location.hash;
+          window.location.replace(newPath);
+        }
+      })();
     </script>
   </head>
   <body>
