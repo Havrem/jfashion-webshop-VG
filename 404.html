@@ -6,17 +6,15 @@
     <script type="text/javascript">
       (function () {
         const redirectBase = '/jfashion-webshop';
-        const current = window.location.pathname;
 
-        // Only redirect if not already inside /jfashion-webshop
-        if (!current.startsWith(redirectBase)) {
+        const current = window.location.pathname;
+        const isAlreadyRedirected = current.startsWith(redirectBase);
+
+        if (!isAlreadyRedirected) {
           const newPath = redirectBase + current + window.location.search + window.location.hash;
           window.location.replace(newPath);
-        } else {
-          // Already in /jfashion-webshop — maybe user refreshed inside a deep route
-          // Send them to root so React can catch and rehydrate it properly
-          window.location.replace(redirectBase + '/');
         }
+        // If already redirected, do nothing — React will now handle the route
       })();
     </script>
   </head>
