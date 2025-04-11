@@ -8,12 +8,21 @@ import Navbar from "../components/Navbar";
 import OrderModal from "../components/OrderModal";
 import { useState } from "react";
 import Footer from "../components/Footer";
+import { useCart } from "../hooks/useCart";
+import { toast } from "react-toastify";
 
 const Product = () => {
   const { state } = useLocation();
   const { product } = state || {};
   const [showModal, setShowModal] = useState(false);
   const [showConfirmation, setShowConfirmation] = useState(false);
+
+  const { add } = useCart();
+
+  const handleAdd = () => {
+    add(product);
+    toast.success("Added to cart!");
+  }
 
   if (!product) return <p>Loading...</p>;
 
@@ -24,7 +33,7 @@ const Product = () => {
         <Breadcrumbs></Breadcrumbs>
         <Categories></Categories>
 
-        {showModal && (
+        {/* {showModal && (
           <OrderModal
             product={product}
             onClose={() => {
@@ -34,7 +43,7 @@ const Product = () => {
             showConfirmation={showConfirmation}
             setShowConfirmation={setShowConfirmation}
           />
-        )}
+        )} */}
 
         <div className={styles.details}>
           <div className={styles.left}>
@@ -51,8 +60,12 @@ const Product = () => {
             <h1 className={styles.brand}>{product.brand}</h1>
             <p className={styles.title}>{product.title}</p>
             <p className={styles.price}>${product.price}</p>
-            <button className={styles.buyBtn} onClick={() => setShowModal(true)}>
-              Buy
+            {/* <button className={styles.buyBtn} onClick={() => setShowModal(true)}>
+              Add
+            </button> */}
+
+            <button className={styles.buyBtn} onClick={handleAdd}>
+              Add
             </button>
             <p className={styles.description}>{product.description}</p>
           </div>

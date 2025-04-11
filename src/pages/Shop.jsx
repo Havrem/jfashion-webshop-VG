@@ -9,7 +9,7 @@ import Bestsellers from "../components/Bestsellers";
 
 const Shop = () => {
   return (
-    <>
+    <div className={styles.mywrap}>
       <Navbar></Navbar>
       <div className={styles.mainContent}>
         <Banner></Banner>
@@ -23,7 +23,7 @@ const Shop = () => {
         <Bestsellers></Bestsellers>
       </div>
       <Footer></Footer>
-    </>
+    </div>
   );
 };
 
