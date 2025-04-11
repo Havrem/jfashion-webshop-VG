@@ -1,6 +1,9 @@
 import { useState } from "react";
 import styles from "../css/OrderForm.module.css";
+import { useCart } from "../hooks/useCart";
 export default function OrderForm({ onSuccess }) {
+  const { clear } = useCart();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -54,6 +57,7 @@ export default function OrderForm({ onSuccess }) {
     e.preventDefault();
     if (validate()) {
       onSuccess();
+      clear();
       // Here you can send data to backend or show confirmation
     }
   };
@@ -64,44 +68,44 @@ export default function OrderForm({ onSuccess }) {
 
       <div className={styles.grid}>
         <div className={styles.formGroup}>
-          <label>Namn</label>
-          <input type="text" name="name" value={formData.name} onChange={handleChange} />
+          {/* <label>Namn</label> */}
+          <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="name..."/>
           {errors.name && <p className={styles.error}>{errors.name}</p>}
         </div>
 
         <div className={styles.formGroup}>
-          <label>E-post</label>
-          <input type="email" name="email" value={formData.email} onChange={handleChange} />
+          {/* <label>E-post</label> */}
+          <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="email..."/>
           {errors.email && <p className={styles.error}>{errors.email}</p>}
         </div>
 
         <div className={styles.formGroup}>
-          <label>Telefonnummer</label>
-          <input type="text" name="phone" value={formData.phone} onChange={handleChange} />
+          {/* <label>Telefonnummer</label> */}
+          <input type="text" name="phone" value={formData.phone} onChange={handleChange} placeholder="phonenumber..."/>
           {errors.phone && <p className={styles.error}>{errors.phone}</p>}
         </div>
 
         <div className={styles.formGroup}>
-          <label>Gatuadress</label>
-          <input type="text" name="street" value={formData.street} onChange={handleChange} />
+          {/* <label>Gatuadress</label> */}
+          <input type="text" name="street" value={formData.street} onChange={handleChange} placeholder="address..."/>
           {errors.street && <p className={styles.error}>{errors.street}</p>}
         </div>
 
         <div className={styles.formGroup}>
-          <label>Postnummer</label>
-          <input type="text" name="zip" value={formData.zip} onChange={handleChange} />
+          {/* <label>Postnummer</label> */}
+          <input type="text" name="zip" value={formData.zip} onChange={handleChange} placeholder="zip-code..."/>
           {errors.zip && <p className={styles.error}>{errors.zip}</p>}
         </div>
 
         <div className={styles.formGroup}>
-          <label>Ort</label>
-          <input type="text" name="city" value={formData.city} onChange={handleChange} />
+          {/* <label>Ort</label> */}
+          <input type="text" name="city" value={formData.city} onChange={handleChange} placeholder="county..."/>
           {errors.city && <p className={styles.error}>{errors.city}</p>}
         </div>
       </div>
 
       <button type="submit" className={styles.submitButton}>
-        Beställ
+        Order
       </button>
     </form>
   );

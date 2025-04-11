@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styles from '../../css/Cart.module.css';
 import { useCart } from '../../hooks/useCart';
 import Card from './Card';
