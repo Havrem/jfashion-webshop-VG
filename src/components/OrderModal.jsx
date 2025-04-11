@@ -19,9 +19,9 @@ const OrderModal = ({ product, onClose, showConfirmation, setShowConfirmation })
           <div className={styles.modalConfirmation}>
             <h2>Tack för din beställning!</h2>
             <p>Vi behandlar din beställning och kontaktar dig snart.</p>
-            <h4 className={styles.brandConfirmation}>{product.brand}</h4>
+            {/* <h4 className={styles.brandConfirmation}>{product.brand}</h4>
             <p className={styles.title}>{product.title}</p>
-            <p className={styles.price}>${product.price}</p>
+            <p className={styles.price}>${product.price}</p> */}
           </div>
         )}
       </div>

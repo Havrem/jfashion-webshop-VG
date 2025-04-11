@@ -28,3 +28,13 @@
         width: 768px;
     }
 }
+
+.buyBtn {
+    all: unset;
+    align-self: center;
+    border-top: solid 3px rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
+    width: 100%;
+    padding-inline: 0.7rem;
+    padding-block: 0.9rem;
+}
