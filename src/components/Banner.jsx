@@ -18,8 +18,6 @@ const images = {
 const Banner = ({ category }) => {
   const image = images[category];
 
-  console.log(category);
-
   return <Image src={image} className={styles.banner}></Image>;
 };
 

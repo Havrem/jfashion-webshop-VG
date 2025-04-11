@@ -4,8 +4,15 @@
     align-items: center;
     padding-block: 2%;
     row-gap: 0.5rem;
-    width: 80%;
+    width: 100%;
+    padding-inline: 0.5rem;
 }
+
+@media (min-width: 1200px) {
+    .mainContent {
+      width: 1200px;
+    }
+  }
 
 .heartIcon {
     height: 30px;
@@ -35,11 +42,12 @@
     position: relative;
     aspect-ratio: 1 / 1;
     overflow: hidden;
-    background-color: #fcf3e5;
+    background-color: #fffbe5;
     padding-inline: 10%;
     /* padding-top: 30%; */
     padding-bottom: 10%;
-    border: solid 1px rgb(188, 187, 187);
+    border-radius: 25rem;
+    /* border: solid 1px rgb(188, 187, 187); */
 }
 
 .pic {
@@ -91,14 +99,14 @@
     all: unset;
     text-align: center;
     border: solid 1px rgba(6, 6, 6, 0.296);
-    background-color: rgba(255, 168, 182, 0.678);
+    background-color: rgb(255, 255, 255);
     width: 20%;
     padding-inline: 0.7rem;
     padding-block: 0.9rem;
 }
 
 .buyBtn:hover {
-    background: rgba(255, 168, 183, 0.429);
+    background: rgba(193, 193, 193, 0.429);
 }
 
 @media (max-width: 900px) {

@@ -5,7 +5,7 @@ const Top = ({ products }) => {
   return (
     <div id="products" className={styles.productContainer}>
       {products.map((product) => {
-        return <Card key={product.id} product={product} label={false} color="#eefad7"></Card>;
+        return <Card key={product.id} product={product} label={false} color="#ffffff"></Card>;
       })}
     </div>
   );
